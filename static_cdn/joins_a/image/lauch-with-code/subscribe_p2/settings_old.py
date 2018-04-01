@@ -22,7 +22,7 @@ SHARE_URL = "http://127.0.0.1:8000/?ref="
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get("KEY")
+SECRET_KEY = 'h(5x#%r(qg$h(zq@c3(bb9)$b)rs13evrcdzq$s=t3gz-n0xmx'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -58,7 +58,7 @@ ROOT_URLCONF = 'subscribe_p2.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [TEMPLATE_DIR, ],
+        'DIRS': [TEMPLATE_DIR,],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -123,4 +123,4 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
-STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static_cdn")
+
