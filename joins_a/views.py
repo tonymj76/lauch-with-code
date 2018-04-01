@@ -1,9 +1,10 @@
+import requests
 from django.shortcuts import render, get_object_or_404, redirect
 from django.conf import settings
 from django.contrib import messages
 from django.urls import reverse
 from django.views.generic import CreateView, DetailView, ListView
-from django.http.response import Http404
+from django.http.response import Http404, HttpResponse
 from .models import Join
 from .forms import JoinForm
 import uuid
@@ -14,7 +15,10 @@ import uuid
 
 
 # Create your views here.
-
+def index(request):
+    r = requests.get('http://httpbin.org/status/418')
+    print(r.text)
+    return HttpResponse('<pre>' + r.text + '</pre>')
 
 def get_ref_addr():
     ref = str(uuid.uuid4())[:11].upper()
