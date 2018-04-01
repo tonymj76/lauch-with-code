@@ -1,1 +1,1 @@
-web: gunicorn subscribe_p2.wsgi --log-file-
+web: gunicorn subscribe_p2.wsgi
