@@ -22,7 +22,7 @@ SHARE_URL = "http://127.0.0.1:8000/?ref="
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'h(5x#%r(qg$h(zq@c3(bb9)$b)rs13evrcdzq$s=t3gz-n0xmx'
+SECRET_KEY = os.environ.get("KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
