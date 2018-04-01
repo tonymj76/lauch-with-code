@@ -13,7 +13,7 @@ class RefJoinMananger(models.Manager):
 class Join(models.Model):
     first_name = models.CharField("Name", max_length=129)
     email_address = models.EmailField("Email") 
-    friend = models.ForeignKey("self", related_name='referral', blank=True, null=True)
+    friend = models.ForeignKey("self", related_name='referral', blank=True, null=True, on_delete=models.CASCADE)
     ip_address = models.GenericIPAddressField(default="1.1.1")
     ref_address = models.CharField(max_length=122, default="ABC")
     created_date = models.DateTimeField(auto_now=False, auto_now_add=True)
