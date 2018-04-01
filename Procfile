@@ -1,0 +1,1 @@
+web: gunicorn subscribe_p2.wsgi
