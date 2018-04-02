@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+{% load staticfiles %}
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Subcription</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--		Bootstrap 4		-->
+    <link rel="stylesheet" href="{% static 'joins_a/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'joins_a/css/bootstrap-grid.min.css' %}">
+    <link rel="stylesheet" href="{% static 'joins_a/css/bootstrap-reboot.min.css' %}">
+
+    <!--		font awesome svg with js		-->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl"
+        crossorigin="anonymous"></script>
+
+    <!--		joins_a css		-->
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'joins_a/css/main.css' %}" />
+    {% block styles %} {% endblock styles %}
+
+</head>
+
+<body>
+
+    {% block body_block %} 
+    {% endblock %}
+    <!-- Main-Footer -->
+    <footer id="main-footer">
+        <div class="grid">
+            <div class="content-wrap">
+                some main footerll
+            </div>
+        </div>
+    </footer>
+
+    {% include "joins_a/_basejs.html" %}
+   {% block jquery %}{% endblock jquery %}
+
+</body>
+
+</html>
