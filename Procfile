@@ -1,1 +1,1 @@
-web: gunicorn subscribe_src2/subscribe_p2.wsgi
+web: gunicorn subscribe_p2.wsgi
